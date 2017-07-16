@@ -165,34 +165,35 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+          <form action="https://formspree.io/kellermanpaulo@hotmail.com" method="POST">
+            <div class="col-lg-8 col-lg-offset-2">
+              <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+              <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+              <div class="row control-group">
+                <div
+                class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Nome</label> <input type="text" class="form-control"
+                placeholder="Nome" name="name" required
+                data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
             <div class="row control-group">
               <div
               class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Nome</label> <input type="text" class="form-control"
-              placeholder="Nome" id="name" required
-              data-validation-required-message="Please enter your name.">
+              <label>Endereço de Email</label> <input type="email" name="_replyto"
+              class="form-control" placeholder="Email"
+              required
+              data-validation-required-message="Please enter your email address.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="row control-group">
             <div
             class="form-group col-xs-12 floating-label-form-group controls">
-            <label>Endereço de Email</label> <input type="email"
-            class="form-control" placeholder="Email" id="email"
-            required
-            data-validation-required-message="Please enter your email address.">
-            <p class="help-block text-danger"></p>
-          </div>
-        </div>
-        <div class="row control-group">
-          <div
-          class="form-group col-xs-12 floating-label-form-group controls">
-          <label>Mensagem</label>
-          <textarea rows="5" class="form-control" placeholder="Mensagem"
-            id="message" required
+            <label>Mensagem</label>
+            <textarea name="body" rows="5" class="form-control" placeholder="Mensagem"
+           required
             data-validation-required-message="Please enter a message."></textarea>
             <p class="help-block text-danger"></p>
           </div>
@@ -201,21 +202,13 @@
         <div id="success"></div>
         <div class="row">
           <div class="form-group col-xs-12">
-            <button class="btn btn-success btn-lg" onclick="sendMail()" >Enviar</button>
-            <script>
-            function sendMail() {
-              var link = "mailto:kellermanpaulo@hotmail.com"
-              + "?cc=kellermanpaulomota@gmail.com"
-              + "&subject=" + escape("Kellerman - Portifolio - Mensagem de "+document.getElementById('name').value)
-              + "&body=" + escape(document.getElementById('message').value);
-              window.location.href = link;
-            }
-            </script>
+            <input type="submit" value="Enviar" class="btn btn-success btn-lg">
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
+</div>
 </section>
 
 <!-- Footer -->
@@ -226,41 +219,111 @@
         <div class="footer-col col-md-4"></div>
         <div class="footer-col col-md-4">
           <ul class="list-inline">
-            <li><a href="#" class="btn-social btn-outline"><i
-              class="fa fa-fw fa-facebook"></i></a></li>
-              <li><a href="#" class="btn-social btn-outline"><i
-                class="fa fa-fw fa-google-plus"></i></a></li>
-                <li><a href="#" class="btn-social btn-outline"><i
-                  class="fa fa-fw fa-twitter"></i></a></li>
-                  <li><a href="#" class="btn-social btn-outline"><i
-                    class="fa fa-fw fa-linkedin"></i></a></li>
-                    <li><a href="#" class="btn-social btn-outline"><i
-                      class="fa fa-fw fa-dribbble"></i></a></li>
-                    </ul>
-                  </div>
-                  <div class="footer-col col-md-4"></div>
-                </div>
-              </div>
+            <li><a href="https://github.com/kellerman-mota" target="_blank" class="btn-social btn-outline"><i
+              class="fa fa-fw fa-github"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/kellerman-paulo-da-mota/" class="btn-social btn-outline"><i
+                class="fa fa-fw fa-linkedin"></i></a></li>
+              </ul>
             </div>
-            <div class="footer-below">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-12">Copyright &copy; 2016</div>
-                </div>
-              </div>
-            </div>
-          </footer>
-
-          <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-          <div
-          class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-          <a class="btn btn-primary" href="#page-top"> <i
-            class="fa fa-chevron-up"></i>
-          </a>
+            <div class="footer-col col-md-4"></div>
+          </div>
         </div>
+      </div>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">Copyright &copy; 2017</div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-        <!-- Portfolio Modals -->
-        <div class="portfolio-modal modal fade" id="portfolioModal1"
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div
+    class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+    <a class="btn btn-primary" href="#page-top"> <i
+      class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Portfolio Modals -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1"
+  tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body">
+            <h2>Cooper Rama</h2>
+            <hr class="star-primary">
+            <img src="img/portfolio/cooperama-login.png"
+            class="img-responsive img-centered" alt="">
+            <p>
+              Este projeto surgiu da necessidade de automatizar os processos
+              da cooperativa de reciclagem Cooper Rama. Tais processos incluem
+              folha de pagamento, financeiro e estoque de resíduos, tendo como
+              base a <a
+              href="http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm"
+              target="_blank">Politica Nacional de Resíduos Sólidos.</a>
+            </p>
+            <p>
+              Foi idealizado, inicialmente, pela professora <a
+              href="http://lattes.cnpq.br/6093972350544034" target="_blank">Kátia
+              Forville</a> resultando em uma parceria entre a <a
+              href="http://www.senaigo.com.br/" target="_blank">FATESG</a> e
+              a <a href="https://www.incubadorasocial.ufg.br/" target="_blank">Incubadora
+                Social UFG</a>. Ainda como aluno, a minha participação se deu
+                através do programa de iniciação científica.
+              </p>
+              <p>Todo o processo de levantamento de requisitos, elaboração
+                do documento conceitual e a implementação dos requisitos
+                iniciais foram realizados pelo meu grupo. Graças a todo o
+                esforço o nosso projeto foi eleito o melhor da turma por dois
+                semestres consecutivos. Ao concluir a graduação, outro grupo foi
+                eleito pela instituição para dar continuidade ao desenvolvimento
+                do projeto.</p>
+                <ul class="list-inline item-details">
+                  <li><strong>Cliente:</strong> <a
+                    href="https://www.incubadorasocial.ufg.br/" target="_blank">Incubadora
+                    Social UFG</a></li>
+                    <li><strong>Data:</strong> Junho/2013 à Junho/2014</li>
+                    <li><strong>Equipe:</strong> <a target="_blank"
+                      href="https://www.linkedin.com/in/kellerman-paulo-da-mota-5201a978"
+                      target="_blank">Kellerman Mota</a> | <a
+                      href="https://www.linkedin.com/in/leonardo-davinc-8a154b31"
+                      target="_blank">Leonardo Davinc</a> | <a
+                      href="https://www.linkedin.com/in/mariluci-walczak-49050853"
+                      target="_blank">Mariluci Walczak</a></li>
+                      <li><strong>Professores Orientadores:</strong> <a
+                        target="_blank" href="http://lattes.cnpq.br/4429652698279610"
+                        target="_blank">Edjalma Queiroz da Silva</a> | <a
+                        href=" http://lattes.cnpq.br/2053218039321737" target="_blank">Ricardo
+                        Kratz</a> | <a href="http://lattes.cnpq.br/6093972350544034"
+                        target="_blank">Katia Forville</a></li>
+                      </ul>
+                      <hr class="star-primary">
+                      <img src="img/portfolio/cooperama1.png"
+                      class="img-responsive img-centered" alt=""> <img
+                      src="img/portfolio/cooperama2.png"
+                      class="img-responsive img-centered" alt=""> <img
+                      src="img/portfolio/cooperama3.png"
+                      class="img-responsive img-centered" alt="">
+                      <button type="button" class="btn btn-default"
+                      data-dismiss="modal">
+                      <i class="fa fa-times"></i> Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal2"
         tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -272,181 +335,105 @@
             <div class="row">
               <div class="col-lg-8 col-lg-offset-2">
                 <div class="modal-body">
-                  <h2>Cooper Rama</h2>
+                  <h2>Arrielstore - Gerenciador de Licença</h2>
                   <hr class="star-primary">
-                  <img src="img/portfolio/cooperama-login.png"
+                  <img src="img/portfolio/arrielstore-gerenciador-licenca1.png"
                   class="img-responsive img-centered" alt="">
                   <p>
-                    Este projeto surgiu da necessidade de automatizar os processos
-                    da cooperativa de reciclagem Cooper Rama. Tais processos incluem
-                    folha de pagamento, financeiro e estoque de resíduos, tendo como
-                    base a <a
-                    href="http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm"
-                    target="_blank">Politica Nacional de Resíduos Sólidos.</a>
+                    Projeto destinado a realizar o controle de licença em ambientes descentralizados.
+                    Muito comum em ambientes onde o sistema de gestão é instalado na própria infraestrutura da empresa cliente.
+                    O gerenciamento é realizado em tempo real, sendo possível ativar/desativar uma licença ou definir um prazo de validade remotamente.
                   </p>
-                  <p>
-                    Foi idealizado, inicialmente, pela professora <a
-                    href="http://lattes.cnpq.br/6093972350544034" target="_blank">Kátia
-                    Forville</a> resultando em uma parceria entre a <a
-                    href="http://www.senaigo.com.br/" target="_blank">FATESG</a> e
-                    a <a href="https://www.incubadorasocial.ufg.br/" target="_blank">Incubadora
-                      Social UFG</a>. Ainda como aluno, a minha participação se deu
-                      através do programa de iniciação científica.
-                    </p>
-                    <p>Todo o processo de levantamento de requisitos, elaboração
-                      do documento conceitual e a implementação dos requisitos
-                      iniciais foram realizados pelo meu grupo. Graças a todo o
-                      esforço o nosso projeto foi eleito o melhor da turma por dois
-                      semestres consecutivos. Ao concluir a graduação, outro grupo foi
-                      eleito pela instituição para dar continuidade ao desenvolvimento
-                      do projeto.</p>
-                      <ul class="list-inline item-details">
-                        <li><strong>Cliente:</strong> <a
-                          href="https://www.incubadorasocial.ufg.br/" target="_blank">Incubadora
-                          Social UFG</a></li>
-                          <li><strong>Data:</strong> Junho/2013 à Junho/2014</li>
-                          <li><strong>Equipe:</strong> <a target="_blank"
-                            href="https://www.linkedin.com/in/kellerman-paulo-da-mota-5201a978"
-                            target="_blank">Kellerman Mota</a> | <a
-                            href="https://www.linkedin.com/in/leonardo-davinc-8a154b31"
-                            target="_blank">Leonardo Davinc</a> | <a
-                            href="https://www.linkedin.com/in/mariluci-walczak-49050853"
-                            target="_blank">Mariluci Walczak</a></li>
-                            <li><strong>Professores Orientadores:</strong> <a
-                              target="_blank" href="http://lattes.cnpq.br/4429652698279610"
-                              target="_blank">Edjalma Queiroz da Silva</a> | <a
-                              href=" http://lattes.cnpq.br/2053218039321737" target="_blank">Ricardo
-                              Kratz</a> | <a href="http://lattes.cnpq.br/6093972350544034"
-                              target="_blank">Katia Forville</a></li>
-                            </ul>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cooperama1.png"
-                            class="img-responsive img-centered" alt=""> <img
-                            src="img/portfolio/cooperama2.png"
-                            class="img-responsive img-centered" alt=""> <img
-                            src="img/portfolio/cooperama3.png"
-                            class="img-responsive img-centered" alt="">
-                            <button type="button" class="btn btn-default"
-                            data-dismiss="modal">
-                            <i class="fa fa-times"></i> Close
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-modal modal fade" id="portfolioModal2"
-              tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                  <div class="lr">
-                    <div class="rl"></div>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                      <div class="modal-body">
-                        <h2>Arrielstore - Gerenciador de Licença</h2>
-                        <hr class="star-primary">
-                        <img src="img/portfolio/arrielstore-gerenciador-licenca1.png"
-                        class="img-responsive img-centered" alt="">
-                        <p>
-                          Projeto destinado a realizar o controle de licença em ambientes descentralizados.
-                          Muito comum em ambientes onde o sistema de gestão é instalado na própria infraestrutura da empresa cliente.
-                          O gerenciamento é realizado em tempo real, sendo possível ativar/desativar uma licença ou definir um prazo de validade remotamente.
-                        </p>
-                        <ul class="list-inline item-details">
-                          <li><strong>Cliente:</strong> Arriel Automação Comercial</li>
-                          <li><strong>Data:</strong> Janeiro/2016</li>
-                          <li><strong>Equipe:</strong> <a target="_blank"
-                            href="https://www.linkedin.com/in/kellerman-paulo-da-mota-5201a978">Kellerman
-                            Mota</a></li>
-                          </ul>
-                          <hr class="star-primary">
-                          <img src="img/portfolio/arrielstore-gerenciador-licenca2.png"
-                          class="img-responsive img-centered" alt="">
-                          <button type="button" class="btn btn-default"
-                          data-dismiss="modal">
-                          <i class="fa fa-times"></i> Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <ul class="list-inline item-details">
+                    <li><strong>Cliente:</strong> Arriel Automação Comercial</li>
+                    <li><strong>Data:</strong> Janeiro/2016</li>
+                    <li><strong>Equipe:</strong> <a target="_blank"
+                      href="https://www.linkedin.com/in/kellerman-paulo-da-mota-5201a978">Kellerman
+                      Mota</a></li>
+                    </ul>
+                    <hr class="star-primary">
+                    <img src="img/portfolio/arrielstore-gerenciador-licenca2.png"
+                    class="img-responsive img-centered" alt="">
+                    <button type="button" class="btn btn-default"
+                    data-dismiss="modal">
+                    <i class="fa fa-times"></i> Close
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="portfolio-modal modal fade" id="portfolioModal3"
-            tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-              <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                  <div class="rl"></div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                      <h2>Arrielstore - ERP</h2>
-                      <hr class="star-primary">
-                      <img src="img/portfolio/arrielstore-erp.png"
-                      class="img-responsive img-centered" alt="">
-                      <p>O Arriel Store foi idealizado para atender, especialmente, o mercado varejista e contempla
-                        diversos recursos, tais como: Cadastro de pessoas, controle de estoque, controle financeiro,
-                        emissão de nota fiscal eletrônica, emissão de cupom fiscal, movimentação de produtos baseado
-                        em perfis de movimento, multifiliais, dentre outros.</p>
-                        <ul class="list-inline item-details">
-                          <li><strong>Cliente:</strong> Arriel Automação Comercial</li>
-                          <li><strong>Data:</strong> De Dezembro/2014 até o momento</li>
-                          <li><strong>Equipe:</strong> <a target="_blank"
-                            href="https://www.linkedin.com/in/kellerman-paulo-da-mota-5201a978">Kellerman
-                            Mota</a> | <a target="_blank"
-                            href="https://www.linkedin.com/in/diego-taliateli-363842115">Diego
-                            Taliateli</a> | <a target="_blank"
-                            href="https://www.linkedin.com/in/ramon-kenedy-575470108">Ramon
-                            Kenedy</a>
-                          </ul>
-                          <hr class="star-primary">
-                          <img src="img/portfolio/arrielstore-erp1.png"
-                          class="img-responsive img-centered" alt=""> <img
-                          src="img/portfolio/arrielstore-erp2.png"
-                          class="img-responsive img-centered" alt=""> <img
-                          src="img/portfolio/arrielstore-erp3.png"
-                          class="img-responsive img-centered" alt=""> <img
-                          src="img/portfolio/arrielstore-erp4.png"
-                          class="img-responsive img-centered" alt="">
-                          <button type="button" class="btn btn-default"
-                          data-dismiss="modal">
-                          <i class="fa fa-times"></i> Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-modal modal fade" id="portfolioModal3"
+      tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Arrielstore - ERP</h2>
+                <hr class="star-primary">
+                <img src="img/portfolio/arrielstore-erp.png"
+                class="img-responsive img-centered" alt="">
+                <p>O Arriel Store foi idealizado para atender, especialmente, o mercado varejista e contempla
+                  diversos recursos, tais como: Cadastro de pessoas, controle de estoque, controle financeiro,
+                  emissão de nota fiscal eletrônica, emissão de cupom fiscal, movimentação de produtos baseado
+                  em perfis de movimento, multifiliais, dentre outros.</p>
+                  <ul class="list-inline item-details">
+                    <li><strong>Cliente:</strong> Arriel Automação Comercial</li>
+                    <li><strong>Data:</strong> De Dezembro/2014 até o momento</li>
+                    <li><strong>Equipe:</strong> <a target="_blank"
+                      href="https://www.linkedin.com/in/kellerman-paulo-da-mota-5201a978">Kellerman
+                      Mota</a> | <a target="_blank"
+                      href="https://www.linkedin.com/in/diego-taliateli-363842115">Diego
+                      Taliateli</a> | <a target="_blank"
+                      href="https://www.linkedin.com/in/ramon-kenedy-575470108">Ramon
+                      Kenedy</a>
+                    </ul>
+                    <hr class="star-primary">
+                    <img src="img/portfolio/arrielstore-erp1.png"
+                    class="img-responsive img-centered" alt=""> <img
+                    src="img/portfolio/arrielstore-erp2.png"
+                    class="img-responsive img-centered" alt=""> <img
+                    src="img/portfolio/arrielstore-erp3.png"
+                    class="img-responsive img-centered" alt=""> <img
+                    src="img/portfolio/arrielstore-erp4.png"
+                    class="img-responsive img-centered" alt="">
+                    <button type="button" class="btn btn-default"
+                    data-dismiss="modal">
+                    <i class="fa fa-times"></i> Close
+                  </button>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- jQuery -->
-            <script src="js/jquery.js"></script>
+      <!-- jQuery -->
+      <script src="js/jquery.js"></script>
 
-            <!-- Bootstrap Core JavaScript -->
-            <script src="js/bootstrap.min.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
 
-            <!-- Plugin JavaScript -->
-            <script
-            src="js/jquery.easing.min.js"></script>
-            <script src="js/classie.js"></script>
-            <script src="js/cbpAnimatedHeader.js"></script>
+      <!-- Plugin JavaScript -->
+      <script
+      src="js/jquery.easing.min.js"></script>
+      <script src="js/classie.js"></script>
+      <script src="js/cbpAnimatedHeader.js"></script>
 
-            <!-- Contact Form JavaScript -->
-            <script src="js/jqBootstrapValidation.js"></script>
-            <script src="js/contact_me.js"></script>
+      <!-- Contact Form JavaScript -->
+      <script src="js/jqBootstrapValidation.js"></script>
+      <script src="js/contact_me.js"></script>
 
-            <!-- Custom Theme JavaScript -->
-            <script src="js/freelancer.js"></script>
+      <!-- Custom Theme JavaScript -->
+      <script src="js/freelancer.js"></script>
 
-          </body>
+    </body>
 
-          </html>
+    </html>
